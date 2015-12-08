@@ -8,6 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+/**
+ * Clase que utiliza el sensor de temperatura del dispositivo y muestra por pantalla el valor obtenido
+ * @author   Bianney Cabrera, Joshua García, Hilario Pérez y Antonio Suárez
+ * @version  1.0
+ */
 public class Termometro extends AppCompatActivity implements SensorEventListener {
 
     // Declaracion de las variables que vamos a utilizar
@@ -17,8 +22,12 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
     private Sensor mTemperature;
     private final static String falloSensor = "Tu dispositivo no tiene el sensor de temperatura.";
 
-    // Metodo principal que se ejecuta al lanzar la aplicación
-
+    /**
+     * Método que se ejecuta al lanzar la actividad.
+     * Inicializa el Sensor, el SensorManager y establece un mensaje de error si no
+     * se encuentra el sensor de temperatura.
+     * @param savedInstanceState Representa un buffer en el que se guarda el estado de la aplicación
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +51,11 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
         }
     }
 
-    // Actualiza las temperaturas cuando el sensor cambia de estado
-
+    /**
+     * Método que recoge el valor que detecta el sensor y lo actualiza en los TextViews cada vez que
+     * se detecta un cambio en el sensor.
+     * @param event Parámetro que representa un cambio en el sensor de luz.
+     */
     @Override
     public void onSensorChanged(SensorEvent event) {
         float temperatura = event.values[0];
@@ -53,7 +65,5 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
     }
 
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
-    }
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {}
 }
