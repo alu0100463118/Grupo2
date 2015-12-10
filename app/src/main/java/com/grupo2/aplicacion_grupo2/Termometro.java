@@ -1,5 +1,6 @@
 package com.grupo2.aplicacion_grupo2;
 
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -13,6 +14,7 @@ import android.widget.TextView;
  * @author   Bianney Cabrera, Joshua García, Hilario Pérez y Antonio Suárez
  * @version  1.0
  */
+
 public class Termometro extends AppCompatActivity implements SensorEventListener {
 
     // Declaracion de las variables que vamos a utilizar
@@ -43,25 +45,40 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
 
         mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         mTemperature= mSensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
+        mSensorManager.registerListener(this, mTemperature,SensorManager.SENSOR_DELAY_NORMAL);
 
         // Si no detectamos el sensor, mostramos el mensaje de fallo
 
         if (mTemperature == null) {
             textoTemperaturaK.setText(falloSensor);
+            textoTemperaturaK.setTextColor(Color.rgb(255, 0, 0));
         }
     }
 
     /**
      * Método que recoge el valor que detecta el sensor y lo actualiza en los TextViews cada vez que
      * se detecta un cambio en el sensor.
-     * @param event Parámetro que representa un cambio en el sensor de luz.
+     * @param event Parámetro que representa un cambio en el sensor de temperatura.
      */
     @Override
     public void onSensorChanged(SensorEvent event) {
-        float temperatura = event.values[0];
-        textoTemperaturaC.setText("Temperatura 1: " + String.valueOf(temperatura) + "ºC");
-        textoTemperaturaK.setText("Temperatura 2: " + String.valueOf(temperatura + 273.15) + "ºK");
-        textoTemperaturaF.setText("Temperatura 3: " + String.valueOf((temperatura * 1.8) + 32) + "ºF");
+
+        synchronized (this){
+            switch (event.sensor.getType()){
+                case Sensor.TYPE_AMBIENT_TEMPERATURE:
+                    float temperatura = event.values[0];
+                    String temperaturaC = String.format("%.2f", temperatura);
+                    String temperaturaK = String.format("%.2f", temperatura + 273.15);
+                    String temperaturaF = String.format("%.2f", (temperatura * 1.8) + 32);
+                    textoTemperaturaC.setText("Temperatura 1: " + temperaturaC + "ºC");
+                    textoTemperaturaK.setText("Temperatura 2: " + temperaturaK + "ºK");
+                    textoTemperaturaF.setText("Temperatura 3: " + temperaturaF + "ºF");
+                    break;
+                default:
+                    System.out.print("default");
+                    break;
+            }
+        }
     }
 
     @Override

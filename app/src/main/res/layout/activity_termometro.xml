@@ -12,29 +12,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:singleLine="false"
-        android:textColor="#00ffff"
+        android:textColor="#0040FF"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginTop="101dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/textoKelvin"
+        android:layout_marginBottom="40dp"
+        android:layout_centerInParent="true"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textoKelvin"
-        android:layout_below="@+id/texto"
-        android:textColor="#FF0f00"
+        android:textColor="#DF7401"
         android:textSize="24sp"
-        android:layout_marginTop="30dp" />
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textoFarenheit"
         android:layout_below="@+id/textoKelvin"
-        android:textColor="#adff2f"
+        android:textColor="#31B404"
         android:textSize="24sp"
-        android:layout_marginTop="30dp" />
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
