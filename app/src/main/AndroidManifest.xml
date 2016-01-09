@@ -9,21 +9,49 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name=".Actividad_Principal"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Acelerometro"
+            android:label="@string/title_activity_acelerometro"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Termometro"
             android:label="Termometro">
         </activity>
-        <activity android:name=".Pulsometro"
+        <activity
+            android:name=".Pulsometro"
             android:label="Pulsometro">
         </activity>
-        <activity android:name=".Luz"
-            android:label="Sensor de Luz">
+        <activity
+            android:name=".Luz"
+            android:label="Luz">
+        </activity>
+        <activity
+            android:name=".Giroscopio"
+            android:label="Giroscopio">
+        </activity>
+        <activity
+            android:name=".HumedadActivity"
+            android:label="Humedad">
+        </activity>
+        <activity
+            android:name=".MagnometroActivity"
+            android:label="Magnometro">
+        </activity>
+        <activity
+            android:name=".ProximidadActivity"
+            android:label="Proximidad">
+        </activity>
+        <activity
+            android:name=".Podometro"
+            android:label="Podómetro">
         </activity>
     </application>
 

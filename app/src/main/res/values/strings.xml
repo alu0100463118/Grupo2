@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Aplicacion_Grupo2</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_acelerometro">Acelerometro</string>
+    <string name="title_activity_giroscopio">Giroscopio</string>
+    <string name="title_activity_humedad">Humedad</string>
+    <string name="title_activity_magnometro">Magnometro</string>
+    <string name="title_activity_proximidad">Proximidad</string>
+    <string name="title_activity_termometro">Termometro</string>
+    <string name="title_activity_luz">Luz</string>
+    <string name="title_activity_pulsometro">Pulsometro</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

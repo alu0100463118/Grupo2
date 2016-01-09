@@ -10,9 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Termometro"
-        android:id="@+id/Boton_Termometro"
+        android:id="@+id/boton_Termometro"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="103dp"
         android:onClick="lanzar_Termometro" />
 
@@ -21,17 +20,74 @@
         android:layout_height="wrap_content"
         android:text="Pulsometro"
         android:id="@+id/boton_Pulsometro"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="103dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@id/boton_Termometro"
         android:onClick="lanzar_Pulsometro" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sensor de Luz"
-        android:id="@+id/Boton_Luz"
-        android:layout_marginTop="70dp"
-        android:layout_below="@+id/boton_Pulsometro"
-        android:layout_alignStart="@+id/Boton_Termometro"
+        android:text="Luz"
+        android:id="@+id/boton_Luz"
+        android:layout_below="@+id/boton_Termometro"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:onClick="lanzar_Luz" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acelerómetro"
+        android:id="@+id/boton_Acelerometro"
+        android:layout_below="@+id/boton_Pulsometro"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="lanzar_Acelerometro" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giroscopio"
+        android:id="@+id/boton_Giroscopio"
+        android:layout_below="@+id/boton_Luz"
+        android:onClick="lanzar_Giroscopio" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humedad"
+        android:id="@+id/boton_Humedad"
+        android:layout_below="@+id/boton_Acelerometro"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="lanzar_Humedad" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magnómetro"
+        android:id="@+id/boton_Magnometro"
+        android:layout_below="@+id/boton_Giroscopio"
+        android:onClick="lanzar_Magnometro" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proximidad"
+        android:id="@+id/boton_Proximidad"
+        android:layout_below="@+id/boton_Humedad"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="lanzar_Proximidad" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Podómetro"
+        android:id="@+id/boton_Podometro"
+        android:layout_below="@+id/boton_Magnometro"
+        android:onClick="lanzar_Podometro" />
 </RelativeLayout>
