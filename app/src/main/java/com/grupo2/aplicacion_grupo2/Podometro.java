@@ -96,6 +96,7 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
         /**
          * Muestreo de los datos una vez se vaya modificando el valor
          */
+        String pasos = "Número de pasos : ";
         Sensor sensor = event.sensor;
         float[] values = event.values;
         int value = -1;
@@ -108,13 +109,13 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
         }
 
         if (sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
-            textView.setText("Número de pasos : " + value);
+            textView.setText(pasos + value);
         }
         else if (sensor.getType() == Sensor.TYPE_STEP_DETECTOR) {
             /**
              * Prueba. Sólo permite el valor 1 para el paso dado
              */
-            textView.setText("Número de pasos : " + value);
+            textView.setText(pasos + value);
         }
     }
 

@@ -55,6 +55,15 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
         }
     }
 
+    public void temperatureSensor(SensorEvent event){
+        float temperatura = event.values[0];
+        String temperaturaC = String.format("%.2f", temperatura);
+        String temperaturaK = String.format("%.2f", temperatura + 273.15);
+        String temperaturaF = String.format("%.2f", (temperatura * 1.8) + 32);
+        textoTemperaturaC.setText("Temperatura 1: " + temperaturaC + "ºC");
+        textoTemperaturaK.setText("Temperatura 2: " + temperaturaK + "ºK");
+        textoTemperaturaF.setText("Temperatura 3: " + temperaturaF + "ºF");
+    }
     /**
      * Método que recoge el valor que detecta el sensor y lo actualiza en los TextViews cada vez que
      * se detecta un cambio en el sensor.
@@ -66,13 +75,7 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
         synchronized (this){
             switch (event.sensor.getType()){
                 case Sensor.TYPE_AMBIENT_TEMPERATURE:
-                    float temperatura = event.values[0];
-                    String temperaturaC = String.format("%.2f", temperatura);
-                    String temperaturaK = String.format("%.2f", temperatura + 273.15);
-                    String temperaturaF = String.format("%.2f", (temperatura * 1.8) + 32);
-                    textoTemperaturaC.setText("Temperatura 1: " + temperaturaC + "ºC");
-                    textoTemperaturaK.setText("Temperatura 2: " + temperaturaK + "ºK");
-                    textoTemperaturaF.setText("Temperatura 3: " + temperaturaF + "ºF");
+                    temperatureSensor(event);
                     break;
                 default:
                     break;
