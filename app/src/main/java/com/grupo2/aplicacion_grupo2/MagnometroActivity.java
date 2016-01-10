@@ -62,7 +62,7 @@ public class MagnometroActivity extends Activity implements SensorEventListener{
 
     @Override
     public void onSensorChanged(SensorEvent evento) {
-        this.magneticView.setText(String.format("Coordenada X: %f\nCoordenada Y: %f\nCoordenada Z %f", new Object[]{evento.values[0],evento.values[1],evento.values[2]}));
+        this.magneticView.setText(String.format("Coordenada X: %f%nCoordenada Y: %f%nCoordenada Z %f", evento.values[0], evento.values[1], evento.values[2]));
     }
 
 
