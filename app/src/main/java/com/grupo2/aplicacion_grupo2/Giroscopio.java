@@ -106,7 +106,9 @@ public  class Giroscopio extends AppCompatActivity implements SensorEventListene
      * @param accuracy the accuracy
      */
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        //método vacío
+    }
 
     /**
      * On resume.

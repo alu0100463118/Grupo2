@@ -32,7 +32,6 @@ public class Actividad_Principal extends Activity {
      * @param v El parámetro v representa la vista asociada a esta actividad
      */
     public void lanzar_Termometro(View v) {
-        Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), Termometro.class));
     }
 
@@ -41,7 +40,6 @@ public class Actividad_Principal extends Activity {
      * @param v El parámetro v representa la vista asociada a esta actividad
      */
     public void lanzar_Pulsometro(View v) {
-        Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), Pulsometro.class));
     }
 
@@ -50,37 +48,30 @@ public class Actividad_Principal extends Activity {
      * @param v El parámetro v representa la vista asociada a esta actividad
      */
     public void lanzar_Luz(View v) {
-        Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), Luz.class));
     }
 
     public void lanzar_Acelerometro(View v) {
-        Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), Acelerometro.class));
     }
 
     public void lanzar_Giroscopio(View v) {
-        Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), Giroscopio.class));
     }
 
     public void lanzar_Humedad(View v) {
-        Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), HumedadActivity.class));
     }
 
     public void lanzar_Magnometro(View v) {
-        Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), MagnometroActivity.class));
     }
 
     public void lanzar_Proximidad(View v) {
-        Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), ProximidadActivity.class));
     }
 
     public void lanzar_Podometro(View v) {
-        Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), Podometro.class));
     }
 }

@@ -118,7 +118,9 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
      * @param accuracy the accuracy
      */
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) { }
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        //Método vacío
+    }
 
     /**
      * On resume. Registro del listener para conocer si se ha minimizado la actividad

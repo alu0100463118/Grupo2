@@ -75,12 +75,13 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
                     textoTemperaturaF.setText("Temperatura 3: " + temperaturaF + "ºF");
                     break;
                 default:
-                    System.out.print("default");
                     break;
             }
         }
     }
 
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        //Método vacío
+    }
 }

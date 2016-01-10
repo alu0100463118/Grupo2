@@ -68,6 +68,6 @@ public class MagnometroActivity extends Activity implements SensorEventListener{
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
+        //Método vacío
     }
 }

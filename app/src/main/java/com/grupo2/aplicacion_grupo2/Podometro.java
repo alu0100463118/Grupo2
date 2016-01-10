@@ -27,7 +27,6 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
      * declaracion de las variables ha emplear usando la biblioteca de Sensores
       */
     private TextView textView;
-    private TextView texto;
     private SensorManager sensorManager;
 
     private Sensor mStepCounterSensor;
@@ -49,7 +48,6 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_podometro);
         textView = (TextView) findViewById(R.id.texto);
-        texto = (TextView) findViewById(R.id.noSensor);
 
         sensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
         mStepCounterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
@@ -126,7 +124,9 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
      * @param i
      */
     @Override
-    public void onAccuracyChanged(Sensor sensor, int i) {}
+    public void onAccuracyChanged(Sensor sensor, int i) {
+        //Método vacío
+    }
 
 
     /**

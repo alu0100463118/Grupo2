@@ -65,13 +65,14 @@ public class Pulsometro extends AppCompatActivity {
                     textoPulsaciones.setText("Pulsaciones: " + String.valueOf(pulsaciones));
                     break;
                 default:
-                    System.out.print("default");
                     break;
             }
         }
     }
 
   //  @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        //Método vacío
+    }
 }
 

@@ -8,6 +8,7 @@ import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import java.util.logging.Logger;
 
 /**
  * Clase que utiliza el sensor de luz del dispositivo y muestra por pantalla el valor obtenido.
@@ -50,38 +51,40 @@ public class Luz extends AppCompatActivity implements SensorEventListener {
         }
     }
 
+    public void lightSensor(SensorEvent event){
+        float light = event.values[0];
+        lightTxt.setText("Luz: " + String.valueOf(light));
+        int color;
+        if (light > 255){
+            color = 255;
+        }
+        else {
+            color = (int) light;
+        }
+        lightTxt.setBackgroundColor(Color.rgb(255-color, 255-color, 255-color));
+        lightTxt.setTextColor(Color.rgb(color, color, color));
+    }
     /**
      * Método que recoge el valor que detecta el sensor y lo actualiza en el TextView cada vez que
      * se detecta un cambio en el sensor.
      * @param event Parámetro que representa un cambio en el sensor de luz.
      */
-
     @Override
     public void onSensorChanged(SensorEvent event) {
         synchronized (this){
             switch (event.sensor.getType()){
                 case Sensor.TYPE_LIGHT:
-                    float light = event.values[0];
-                    lightTxt.setText("Luz: " + String.valueOf(light));
-
-                    int color;
-                    if (light > 255){
-                        color = 255;
-                    }
-                    else {
-                        color = (int) light;
-                    }
-
-                    lightTxt.setBackgroundColor(Color.rgb(255-color, 255-color, 255-color));
-                    lightTxt.setTextColor(Color.rgb(color, color, color));
+                    lightSensor(event);
                     break;
                 default:
-                    System.out.print("default");
+
                     break;
             }
         }
     }
 
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        //Método vacío
+    }
 }
