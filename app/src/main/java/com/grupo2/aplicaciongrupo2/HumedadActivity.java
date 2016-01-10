@@ -69,14 +69,14 @@ public class HumedadActivity extends Activity implements SensorEventListener {
         float valor=Float.parseFloat(String.valueOf(evento.values[0]));
         int tRed = 255;
         int tGreen = 255;
-        int t_blue = 255;
-        int color = Color.rgb(tRed, tGreen, t_blue);
+        int tBlue = 255;
+        int color = Color.rgb(tRed, tGreen, tBlue);
 
         if(valor <= 25)
         {
             tRed = 255;
             tGreen = 0;
-            t_blue = 0;
+            tBlue = 0;
             fondo.setBackgroundColor(color);
             texto.setText(""+valor);
         }
@@ -85,7 +85,7 @@ public class HumedadActivity extends Activity implements SensorEventListener {
         {
             tRed = 255;
             tGreen = 0;
-            t_blue = 85;
+            tBlue = 85;
             fondo.setBackgroundColor(color);
             texto.setText("" + valor);
         }
@@ -94,7 +94,7 @@ public class HumedadActivity extends Activity implements SensorEventListener {
         {
             tRed = 85;
             tGreen = 0;
-            t_blue = 255;
+            tBlue = 255;
             fondo.setBackgroundColor(color);
             texto.setText("" + valor);
         }
@@ -103,7 +103,7 @@ public class HumedadActivity extends Activity implements SensorEventListener {
         {
             tRed = 0;
             tGreen = 0;
-            t_blue = 255;
+            tBlue = 255;
             fondo.setBackgroundColor(color);
             texto.setText(""+valor);
         }

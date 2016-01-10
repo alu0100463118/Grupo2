@@ -29,6 +29,7 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
     private Sensor mStepCounterSensor;
     private Sensor mStepDetectorSensor;
 
+    private static final String FALLO_SENSOR = "Tu dispositivo no tiene el podómetro.";
 
     /**
      *
@@ -49,7 +50,9 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
         sensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
         mStepCounterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
         mStepDetectorSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
-
+        if ((mStepCounterSensor == null) || (mStepDetectorSensor == null)){
+            textView.setText(FALLO_SENSOR);
+        }
     }
 
     /**

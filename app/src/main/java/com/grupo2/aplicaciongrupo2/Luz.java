@@ -71,13 +71,8 @@ public class Luz extends AppCompatActivity implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         synchronized (this){
-            switch (event.sensor.getType()){
-                case Sensor.TYPE_LIGHT:
-                    lightSensor(event);
-                    break;
-                default:
-
-                    break;
+            if (event.sensor.getType() == Sensor.TYPE_LIGHT){
+                lightSensor(event);
             }
         }
     }

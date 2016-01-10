@@ -25,8 +25,7 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
     /** The accelerometer. */
     private Sensor sensor;
 
-    private static final String FALLO_SENSOR = SensorFail.sensorFail + "ACELERÓMETRO.";
-    private static final String MS = " m/s ";
+    private static final String FALLO_SENSOR = "Su dispositivo no tiene el sensor: ACELERÓMETRO.";
 
     /**
      * On create.
@@ -103,9 +102,8 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
         /**
          * @variable texto muestra los valores de los tres ejes en metros/segundos.
          */
-        texto.setText("\n" + " Valor de X: " + x +MS+ "\n" + " Valor de Y: " + y +MS+  "\n" + " Valor de Z: " + z + MS);
 
-
+        texto.setText(String.format("Coordenada X: %f%nCoordenada Y: %f%nCoordenada Z %f", x, y, z));
     }
 
     /**

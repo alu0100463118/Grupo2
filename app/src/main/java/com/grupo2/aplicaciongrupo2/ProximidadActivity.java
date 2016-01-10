@@ -66,10 +66,10 @@ public class ProximidadActivity extends Activity implements SensorEventListener{
     public void onSensorChanged(SensorEvent evento) {
         float valor=Float.parseFloat(String.valueOf(evento.values[0]));
         if (valor <= 2.5) {
-            int t_red =(int) (Math.random()*255+1);
-            int t_green =(int)(Math.random()*255+1);
-            int t_blue =(int)(Math.random()*255+1);
-            int color = Color.rgb(t_red, t_green, t_blue);
+            int tRed =(int) (Math.random()*255+1);
+            int tGreen =(int)(Math.random()*255+1);
+            int tBlue =(int)(Math.random()*255+1);
+            int color = Color.rgb(tRed, tGreen, tBlue);
             fondo.setBackgroundColor(color);
         }
         else{
