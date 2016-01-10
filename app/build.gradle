@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 
 dependencies {
@@ -24,4 +25,14 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.0'
+}
+
+sonarqube {
+    properties  {
+        property "sonar.projectName", "Aplicacion_Grupo2"
+        property "sonar.version", "1.0"
+
+        property "sonar.sources", "./src/main/java"
+        property "sonar.verbose", "false"
+    }
 }

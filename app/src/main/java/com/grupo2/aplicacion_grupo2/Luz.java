@@ -65,7 +65,7 @@ public class Luz extends AppCompatActivity implements SensorEventListener {
                     lightTxt.setText("Luz: " + String.valueOf(light));
 
                     int color;
-                    if (light > 255) {
+                    if (light > 255){
                         color = 255;
                     }
                     else {
