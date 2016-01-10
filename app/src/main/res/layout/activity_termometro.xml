@@ -5,7 +5,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.grupo2.aplicacion_grupo2.Termometro">
+    tools:context="com.grupo2.aplicaciongrupo2.Termometro">
 
     <TextView
         android:id="@+id/texto"

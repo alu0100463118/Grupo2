@@ -1,8 +1,7 @@
-package com.grupo2.aplicacion_grupo2;
+package com.grupo2.aplicaciongrupo2;
 
 
 import android.content.Context;
-import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -12,8 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-
-import java.util.List;
 
 
 /**

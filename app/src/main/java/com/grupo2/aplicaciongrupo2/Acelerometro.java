@@ -1,11 +1,7 @@
-package com.grupo2.aplicacion_grupo2;
+package com.grupo2.aplicaciongrupo2;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -29,7 +25,8 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
     /** The accelerometer. */
     private Sensor sensor;
 
-    private final static String falloSensor = SensorFail.sensorFail + "ACELERÓMETRO.";
+    private static final String FALLO_SENSOR = SensorFail.sensorFail + "ACELERÓMETRO.";
+    private static final String MS = " m/s ";
 
     /**
      * On create.
@@ -50,7 +47,7 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
 
         // Si no detectamos el sensor, mostramos el mensaje de fallo
         if (sensor == null) {
-            texto.setText(falloSensor);
+            texto.setText(FALLO_SENSOR);
         }
 
     }
@@ -106,7 +103,7 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
         /**
          * @variable texto muestra los valores de los tres ejes en metros/segundos.
          */
-        texto.setText("\n" + " Valor de X: " + x +" m/s "+ "\n" + " Valor de Y: " + y +" m/s "+  "\n" + " Valor de Z: " + z + " m/s ");
+        texto.setText("\n" + " Valor de X: " + x +MS+ "\n" + " Valor de Y: " + y +MS+  "\n" + " Valor de Z: " + z + MS);
 
 
     }

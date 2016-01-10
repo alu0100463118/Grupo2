@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.grupo2.aplicacion_grupo2.Luz">
+    tools:context="com.grupo2.aplicaciongrupo2.Luz">
 
     <TextView
         android:id="@+id/texto"

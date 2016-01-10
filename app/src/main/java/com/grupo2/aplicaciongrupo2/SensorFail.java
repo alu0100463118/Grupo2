@@ -1,4 +1,4 @@
-package com.grupo2.aplicacion_grupo2;
+package com.grupo2.aplicaciongrupo2;
 
 /**
  * Created by Bianney on 10/01/2016.

@@ -1,4 +1,4 @@
-package com.grupo2.aplicacion_grupo2;
+package com.grupo2.aplicaciongrupo2;
 
 import android.graphics.Color;
 import android.hardware.Sensor;
@@ -22,7 +22,7 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
     private TextView textoTemperaturaC, textoTemperaturaK, textoTemperaturaF ;
     private SensorManager mSensorManager;
     private Sensor mTemperature;
-    private final static String falloSensor = "Tu dispositivo no tiene el sensor de temperatura.";
+    private static final String falloSensor = "Tu dispositivo no tiene el sensor de temperatura.";
 
     /**
      * Método que se ejecuta al lanzar la actividad.

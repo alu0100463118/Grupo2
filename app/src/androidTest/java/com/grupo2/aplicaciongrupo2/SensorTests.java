@@ -1,4 +1,4 @@
-package com.grupo2.aplicacion_grupo2;
+package com.grupo2.aplicaciongrupo2;
 
 import android.test.InstrumentationTestCase;
 

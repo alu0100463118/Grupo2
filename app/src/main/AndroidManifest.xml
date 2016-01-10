@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.grupo2.aplicacion_grupo2" >
+    package="com.grupo2.aplicaciongrupo2" >
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".Actividad_Principal"
+        <activity android:name=".ActividadPrincipal"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
 
@@ -19,38 +19,38 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Acelerometro"
+            android:name="com.grupo2.aplicaciongrupo2.Acelerometro"
             android:label="@string/title_activity_acelerometro"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Termometro"
+        <activity android:name="com.grupo2.aplicaciongrupo2.Termometro"
             android:label="Termometro">
         </activity>
         <activity
-            android:name=".Pulsometro"
+            android:name="com.grupo2.aplicaciongrupo2.Pulsometro"
             android:label="Pulsometro">
         </activity>
         <activity
-            android:name=".Luz"
+            android:name="com.grupo2.aplicaciongrupo2.Luz"
             android:label="Luz">
         </activity>
         <activity
-            android:name=".Giroscopio"
+            android:name="com.grupo2.aplicaciongrupo2.Giroscopio"
             android:label="Giroscopio">
         </activity>
         <activity
-            android:name=".HumedadActivity"
+            android:name="com.grupo2.aplicaciongrupo2.HumedadActivity"
             android:label="Humedad">
         </activity>
         <activity
-            android:name=".MagnometroActivity"
+            android:name="com.grupo2.aplicaciongrupo2.MagnometroActivity"
             android:label="Magnometro">
         </activity>
         <activity
-            android:name=".ProximidadActivity"
+            android:name="com.grupo2.aplicaciongrupo2.ProximidadActivity"
             android:label="Proximidad">
         </activity>
         <activity
-            android:name=".Podometro"
+            android:name="com.grupo2.aplicaciongrupo2.Podometro"
             android:label="Podómetro">
         </activity>
     </application>

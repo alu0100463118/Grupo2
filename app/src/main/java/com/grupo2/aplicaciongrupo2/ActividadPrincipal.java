@@ -1,11 +1,9 @@
-package com.grupo2.aplicacion_grupo2;
+package com.grupo2.aplicaciongrupo2;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 /**
  * Clase que representa la actividad principal de la aplicación
@@ -15,7 +13,7 @@ import android.widget.Button;
  * @version  1.0
  */
 
-public class Actividad_Principal extends Activity {
+public class ActividadPrincipal extends Activity {
 
     /**
      * Método que crea el hilo principal de la actividad

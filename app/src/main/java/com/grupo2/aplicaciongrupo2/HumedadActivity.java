@@ -1,12 +1,10 @@
-package com.grupo2.aplicacion_grupo2;
+package com.grupo2.aplicaciongrupo2;
 
 /**
  * Created by Sergio on 10/12/2015.
  */
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.DialogFragment;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -24,7 +22,7 @@ public class HumedadActivity extends Activity implements SensorEventListener {
     SensorManager sensorM;
     List<Sensor> sensores;
 
-    private final static String sensorFail = "Tu dispositivo no tiene el sensor de humedad";
+    private static final String sensorFail = "Tu dispositivo no tiene el sensor de humedad";
 
     /**
      *       Primero se le especifica a la clase HumedadActivity que implemente el SensorEventListener, esto

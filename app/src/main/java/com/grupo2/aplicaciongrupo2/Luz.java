@@ -1,4 +1,4 @@
-package com.grupo2.aplicacion_grupo2;
+package com.grupo2.aplicaciongrupo2;
 
 import android.graphics.Color;
 import android.hardware.Sensor;
@@ -8,7 +8,6 @@ import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-import java.util.logging.Logger;
 
 /**
  * Clase que utiliza el sensor de luz del dispositivo y muestra por pantalla el valor obtenido.
@@ -23,7 +22,7 @@ public class Luz extends AppCompatActivity implements SensorEventListener {
     private TextView lightTxt;
     private SensorManager sensorManager;
     private Sensor lightSensor;
-    private final static String sensorFail = "Tu dispositivo no tiene el sensor de luz";
+    private static final String sensorFail = "Tu dispositivo no tiene el sensor de luz";
 
     /**
      * Método que se ejecuta al lanzar la actividad.

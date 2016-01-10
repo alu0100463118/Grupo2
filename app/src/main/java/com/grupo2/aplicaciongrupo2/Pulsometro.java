@@ -1,4 +1,4 @@
-package com.grupo2.aplicacion_grupo2;
+package com.grupo2.aplicaciongrupo2;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -19,7 +19,7 @@ public class Pulsometro extends AppCompatActivity {
     private TextView textoPulsaciones;
     private SensorManager mSensorManager;
     private Sensor mHeartRate;
-    private final static String falloSensor = "Tu dispositivo no tiene el pulsómetro.";
+    private static final String falloSensor = "Tu dispositivo no tiene el pulsómetro.";
 
     /**
      * Método que se ejecuta al lanzar la actividad.
