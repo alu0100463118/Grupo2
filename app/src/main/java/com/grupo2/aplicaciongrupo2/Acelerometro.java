@@ -27,6 +27,10 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
 
     private static final String FALLO_SENSOR = "Su dispositivo no tiene el sensor: ACELERÓMETRO.";
 
+    public Sensor getSensor() {
+        return sensor;
+    }
+
     /**
      * On create.
      *

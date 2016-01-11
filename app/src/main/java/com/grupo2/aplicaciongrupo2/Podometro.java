@@ -153,5 +153,11 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
         sensorManager.unregisterListener(this, mStepDetectorSensor);
     }
 
+    public Sensor getmStepCounterSensor() {
+        return mStepCounterSensor;
+    }
 
+    public Sensor getmStepDetectorSensor() {
+        return mStepDetectorSensor;
+    }
 }

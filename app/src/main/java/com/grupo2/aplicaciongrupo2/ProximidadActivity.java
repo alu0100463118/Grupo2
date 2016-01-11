@@ -81,4 +81,8 @@ public class ProximidadActivity extends Activity implements SensorEventListener{
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
         //Método vacío
     }
+
+    public List<Sensor> getSensores() {
+        return sensores;
+    }
 }

@@ -83,4 +83,8 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
         //Método vacío
     }
+
+    public Sensor getmTemperature() {
+        return mTemperature;
+    }
 }

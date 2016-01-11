@@ -20,9 +20,14 @@ public class HumedadActivity extends Activity implements SensorEventListener {
     TextView texto;
     Sensor s;
     SensorManager sensorM;
+
     List<Sensor> sensores;
 
     private static final String SENSOR_FAIL = "Tu dispositivo no tiene el sensor de humedad";
+
+    public List<Sensor> getSensores() {
+        return sensores;
+    }
 
     /**
      *       Primero se le especifica a la clase HumedadActivity que implemente el SensorEventListener, esto

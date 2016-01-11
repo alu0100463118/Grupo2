@@ -18,6 +18,7 @@ public class MagnometroActivity extends Activity implements SensorEventListener{
     TextView magneticView;
     Sensor s;
     SensorManager sensorM;
+
     List<Sensor> sensores;
 
     /**
@@ -69,5 +70,9 @@ public class MagnometroActivity extends Activity implements SensorEventListener{
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
         //Método vacío
+    }
+
+    public List<Sensor> getSensores() {
+        return sensores;
     }
 }

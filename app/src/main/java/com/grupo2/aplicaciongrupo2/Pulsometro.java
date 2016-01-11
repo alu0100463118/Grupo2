@@ -70,5 +70,9 @@ public class Pulsometro extends AppCompatActivity {
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
         //Método vacío
     }
+
+    public Sensor getmHeartRate() {
+        return mHeartRate;
+    }
 }
 

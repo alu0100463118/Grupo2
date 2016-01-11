@@ -21,8 +21,13 @@ public class Luz extends AppCompatActivity implements SensorEventListener {
 
     private TextView lightTxt;
     private SensorManager sensorManager;
+    private float lightValue;
     private Sensor lightSensor;
     private static final String SENSOR_FAIL = "Tu dispositivo no tiene el sensor de luz";
+
+    public Sensor getLightSensor() {
+        return lightSensor;
+    }
 
     /**
      * Método que se ejecuta al lanzar la actividad.
@@ -52,6 +57,7 @@ public class Luz extends AppCompatActivity implements SensorEventListener {
 
     public void lightSensor(SensorEvent event){
         float light = event.values[0];
+        lightValue = light;
         lightTxt.setText("Luz: " + light);
         int color;
         if (light > 255){
@@ -80,5 +86,9 @@ public class Luz extends AppCompatActivity implements SensorEventListener {
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
         //Método vacío
+    }
+
+    public float getLightValue() {
+        return lightValue;
     }
 }

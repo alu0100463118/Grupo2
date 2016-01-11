@@ -20,11 +20,16 @@ public  class Giroscopio extends AppCompatActivity implements SensorEventListene
     /** The sensor manager. */
     SensorManager sensorManager;
 
+
+
     /** The giroscopio. */
     private Sensor sensor;
 
     private static final String FALLO_SENSOR = "Tu dispositivo no tiene el sensor: GIROSCÓPIO.";
 
+    public Sensor getSensor() {
+        return sensor;
+    }
 
     /**
      * On create.
